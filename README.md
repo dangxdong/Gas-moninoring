@@ -1,8 +1,8 @@
-# Gas-monitoing
+# Gas-monitoring
 
-This is a project as part of my course work at NCI, for "Programming for Data Analysis".
+This is a project as part of my course work at my college (MSc. Data Analytics 2015-2016), for "Programming for Data Analysis".
 
-The gas data set is obtained from the UCI machine learning website, with sensor readings of 16 electronic chemosensors. A gas mixture with varying but controlled concentrations of CO and ethylene is continuously filled in a chamber where the 16 sensors are installed, and the sensor reading are obtained in a nearly real-time manner for 12 hours.
+The gas data set is obtained from the UCI machine learning website (http://archive.ics.uci.edu/ml/datasets/Gas+sensor+array+under+dynamic+gas+mixtures), with sensor readings of 16 electronic chemosensors. A gas mixture with varying but controlled concentrations of CO and ethylene is continuously filled in a chamber where the 16 sensors are installed, and the sensor reading are obtained in a nearly real-time manner for 12 hours.
 
 This project is to use MapReduce to 
 
