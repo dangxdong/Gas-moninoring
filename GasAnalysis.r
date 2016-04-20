@@ -85,6 +85,30 @@ calcRMSE(pred.glm3,COtimejoin2$CO)    # 85.14778
 
 
 
+# Try on the original data set:
+library(data.table)
+
+ethylene_CO = fread("ethylene_CO.txt")
+ethylene_CO = as.data.frame(ethylene_CO)
+names(ethylene_CO) = c("Timesec", "CO", "Ethylene", "sr1", "sr2", "sr3", "sr4",
+                       "sr5", "sr6", "sr7", "sr8", "sr9", "sr10", "sr11", "sr12",
+                       "sr13", "sr14", "sr15", "sr16")
+
+# sample 10000 observations
+set.seed(3003)
+sampleidx = sample(length(ethylene_CO[,1]), 10000)
+
+ethylene_CO_small = ethylene_CO[sampleidx,]
+
+
+lmtt = lm(as.formula(fmCO1), data=ethylene_CO_small)
+predCOt = predict(lmtt)
+calcRMSE(predCOt,ethylene_CO_small$CO)    #  88.9588
+
+glmtt = glm(as.formula(fmCO1), data=ethylene_CO_small, family = "poisson")
+predCOtp = predict(glmtt, type="response")
+calcRMSE(predCOtp,ethylene_CO_small$CO)  # 87.5312
+
 
 
 
