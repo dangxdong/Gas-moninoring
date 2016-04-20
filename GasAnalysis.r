@@ -7,7 +7,7 @@ library(RMySQL)
 
 source("calcRMSE.r")
 
-mydb = dbConnect(MySQL(), user='root', password='pswd1234',
+mydb = dbConnect(MySQL(), user='root', password='mypassword',
                                        dbname='Gas', host='localhost')
 
 # to check the tables in the database 'Gas': 
